@@ -24,16 +24,15 @@ if carro:
 
 dias = st.text_input("Quantos Dias?")
 km = st.text_input('Quantos Kilometros Rodados?')
-if dias:
-     if km:
-          
-          dias = int(dias)
-          km = float(km)
-          
-          valor_dias = dias * valor_dia
-          valor_km = km * 0.15
+
+if st.button('Calcular'):
+      dias = int(dias)
+      km = float(km)
+
+      valor_dias = dias * valor_dia
+      valor_km = km * 0.15
 
 
-          valor_total = valor_dias +valor_km
+      valor_total = valor_dias +valor_km
 
-          st.warning(f"Você Andou {km}Km Por {dias} Dias, Então O Preço A Pagar É R${valor_total:.2f}")
+      st.warning(f"Você Andou {km}Km Por {dias} Dias, Então O Preço A Pagar É R${valor_total:.2f}")
